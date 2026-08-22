@@ -208,8 +208,8 @@ export const FareCalculator = () => {
   }, []);
   return (
     
-    <div className="w-full max-w-2xl mx-auto space-y-6">
-      <Card className="hover:shadow-lg ">
+    <div className="w-full mx-auto space-y-6">
+      <Card className="max-w-full  w-[485.22px] mx-auto overflow-x-hidden hover:shadow-lg">
         <CardHeader className="space-y-2">
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary-glow">
@@ -219,7 +219,7 @@ export const FareCalculator = () => {
           </div>
         </CardHeader>
         
-        <CardContent className="space-y-5">
+        <CardContent className=" min-w-0 space-y-5">
           {/* Step 1: 업체 선택 */}
           <div className="space-y-2">
             <StepHeader n={1} icon={Building2} title="업체 선택" active={!company} done={!!company} />
@@ -275,7 +275,7 @@ export const FareCalculator = () => {
           {/* Step 3: 차종 선택 */}
           <div className={`space-y-2 transition-opacity ${fuel ? "" : "opacity-40 pointer-events-none"}`}>
             <StepHeader n={3} icon={Car} title="차종 선택" active={!!fuel && !selectedCar} done={!!selectedCar} />
-            <div className="rounded-lg border border-input bg-card h-56 overflow-y-auto">
+            <div className="w-full min-w-0 overflow-x-hidden rounded-lg border border-input bg-card h-56 overflow-y-auto">
               <div className="relative p-2 border-b border-input">
                 <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
@@ -326,7 +326,7 @@ export const FareCalculator = () => {
                   등록된 차종이 없습니다
                 </div>
               ) : (
-                <div className="grid grid-cols-2 gap-1 p-1">
+                <div className="grid w-full min-w-0 grid-cols-2 gap-1 p-1">
                   {searchedModels.map((m) => {
                     const active = selectedCar?.id === m.id;
                     return (
@@ -334,7 +334,7 @@ export const FareCalculator = () => {
                         key={m.id}
                         type="button"
                         onClick={() => pickCar(m)}
-                        className={`text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                        className={`min-w-0 w-full overflow-hidden text-left px-3 py-2 text-sm whitespace-normal break-all leading-5 rounded-md transition-colors ${
                           active
                             ? "bg-primary/10 text-primary font-medium ring-1 ring-primary/40 cursor-pointer"
                             : "hover:bg-accent cursor-pointer"
