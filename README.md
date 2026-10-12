@@ -27,7 +27,7 @@ Supabase 기반의 차량 데이터를 통해 <b>업체, 연료, 차종, 구간�
 ------------------
 
 ## 🔗 배포 URL
-**DriveMore** 
+**DriveMore** https://drivemore-one.vercel.app/
 
 ---------------
 
