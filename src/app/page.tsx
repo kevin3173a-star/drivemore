@@ -29,7 +29,7 @@ const Index = () => {
 
         <footer className="mt-16 text-center text-sm text-muted-foreground animate-in fade-in duration-700 delay-300 space-y-2">
           <p>© 2026 카셰어링 주행료 계산기. 정확하고 빠른 요금 계산</p>
-          {/* <Link href="/admin" className="text-xs hover:text-foreground underline">관리자</Link> */}
+          <Link href="/admin" className="text-xs hover:text-foreground underline">관리자</Link>
         </footer>
       </div>
     </div>
